@@ -6,6 +6,7 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 	<link rel="stylesheet" href="style.css">
   	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
   	<script src="app.js"></script>
@@ -27,5 +28,7 @@
 	<h1>Triangle Meal Scheduling</h1>
 	<!-- where content is displayed -->
     <div ng-view></div>
+    <calendar selected="day"></calendar>
+    <span>Selected date: <b>{{day.format('dddd, MMMM Do YYYY')}}</b></label>
 </body>
 </html>
