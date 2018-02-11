@@ -26,9 +26,12 @@ app.config(function($routeProvider) {
 app.controller('MainController', [ '$scope', function($scope) {
 	$scope.mainHeader = "";
 	$scope.day = moment();
+	$scope.viewMeals = function(scope){
+		console.log($scope.day);
+	};
 	$scope.addMeal = function() {
 		alert("addMeal");
-	}
+	};
 }]);
 
 app.directive("calendar", function() {

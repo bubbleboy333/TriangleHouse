@@ -11,7 +11,7 @@
   	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
   	<script src="app.js"></script>
 </head>
-<body>
+<body ng-controller="MainController">
 	<nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -21,7 +21,7 @@
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#!request">Request Late Plate</a></li>
                     <li><a href="#!add">Add Meal</a></li>
-                    <li><a href="#!view">View Meals</a></li>
+                    <li><a href="#!view" ng-click="viewMeals()">View Meals</a></li>
                 </ul>
             </div>
         </nav>
@@ -29,6 +29,6 @@
 	<!-- where content is displayed -->
     <div ng-view></div>
     <calendar selected="day"></calendar>
-    <span>Selected date: <b>{{day.format('dddd, MMMM Do YYYY')}}</b></label>
+    <span>Selected date: <b>{{day.format('dddd, MMMM Do YYYY')}}</b></span>
 </body>
 </html>
