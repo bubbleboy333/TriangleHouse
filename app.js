@@ -8,15 +8,15 @@ app.config(function($routeProvider) {
 	})
 	.when("/add", {
 		templateUrl: "templates/addMeal.html",
-		controller: "AddMealController"
+		controller: "MainController"
 	})
 	.when("/request", {
 		templateUrl: "templates/request.html",
-		controller: "RequestController"
+		controller: "MainController"
 	})
 	.when("/view", {
 		templateUrl: "templates/view.html",
-		controller: "ViewController"
+		controller: "MainController"
 	})
 	.otherwise({
         template: '<h1>Route not Found</h1><h3>This is an incorrect route<h3><p>take me back <a href="#!">HOME</a></p>'
@@ -49,7 +49,7 @@ app.directive("calendar", function() {
             _buildMonth(scope, start, scope.month);
 
             scope.select = function(day) {
-                scope.selected = day.date;  
+                scope.selected = day.date;
             };
 
             scope.next = function() {
@@ -67,7 +67,7 @@ app.directive("calendar", function() {
             };
         }
     };
-    
+
     function _removeTime(date) {
         return date.day(0).hour(0).minute(0).second(0).millisecond(0);
     }
